@@ -1,0 +1,325 @@
+/*=====================================================
+    AI Resume Screening System
+    Premium SaaS Theme
+======================================================*/
+
+/* Hide Streamlit Branding */
+
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+header{
+    visibility:hidden;
+}
+
+/*=====================================================
+    Background
+======================================================*/
+
+.stApp{
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,0.04) 0%,
+    transparent 28%),
+
+    radial-gradient(circle at bottom left,
+    rgba(255,255,255,0.03) 0%,
+    transparent 30%),
+
+    #0f1117;
+
+    color:white;
+
+}
+
+/*=====================================================
+    Main Container
+======================================================*/
+
+.block-container{
+
+    padding-top:2rem;
+
+    padding-left:3rem;
+
+    padding-right:3rem;
+
+    padding-bottom:2rem;
+
+}
+
+/*=====================================================
+    Login Card
+======================================================*/
+
+.login-card{
+
+    width:100%;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    background:#181b22;
+
+    border:1px solid #2c313c;
+
+    box-shadow:0px 12px 40px rgba(0,0,0,.45);
+
+}
+/*=====================================================
+    Titles
+======================================================*/
+
+.login-title{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:8px;
+
+}
+
+.login-subtitle{
+
+    text-align:center;
+
+    color:#9ca3af;
+
+    font-size:15px;
+
+    margin-bottom:30px;
+
+}
+
+/*=====================================================
+    Input Boxes
+======================================================*/
+
+.stTextInput input{
+
+    background:#1a1d24 !important;
+
+    color:white !important;
+
+    border:1px solid #31343c !important;
+
+    border-radius:12px !important;
+
+    height:50px !important;
+
+    padding-left:15px !important;
+
+}
+
+.stTextInput input:focus{
+
+    border:1px solid #3b82f6 !important;
+
+    box-shadow:none !important;
+
+}
+
+/*=====================================================
+    Password Box
+======================================================*/
+
+.stTextInput{
+
+    margin-bottom:12px;
+
+}
+
+/*=====================================================
+    Buttons
+======================================================*/
+
+.stButton>button{
+
+    width:100%;
+
+    height:48px;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#111827;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+.stButton>button:hover{
+
+    background:#f3f4f6;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0px 8px 20px rgba(255,255,255,.08);
+
+}
+
+/*=====================================================
+    Sidebar
+======================================================*/
+
+section[data-testid="stSidebar"]{
+
+    background:#16181d;
+
+    border-right:1px solid #2d3138;
+
+}
+
+/*=====================================================
+    Cards
+======================================================*/
+
+div[data-testid="stMetric"]{
+
+    background:#181b22;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    border:1px solid #2d3138;
+
+}
+
+/*=====================================================
+    Metrics
+======================================================*/
+
+div[data-testid="metric-container"]{
+
+    background:#181b22;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    border:1px solid #2d3138;
+
+}
+
+/*=====================================================
+    Expander
+======================================================*/
+
+.streamlit-expanderHeader{
+
+    background:#181b22;
+
+    border-radius:10px;
+
+}
+
+/*=====================================================
+    Success
+======================================================*/
+
+div[data-baseweb="notification"]{
+
+    border-radius:12px;
+
+}
+
+/*=====================================================
+    Progress Bar
+======================================================*/
+
+.stProgress > div > div{
+
+    background:#22c55e;
+
+}
+
+/*=====================================================
+    Tables
+======================================================*/
+
+table{
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+/*=====================================================
+    Scrollbar
+======================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3a3d45;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#17191f;
+
+}
+
+/*=====================================================
+    Headings
+======================================================*/
+
+h1{
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+h2{
+
+    color:white;
+
+}
+
+h3{
+
+    color:white;
+
+}
+
+/*=====================================================
+    Divider
+======================================================*/
+
+hr{
+
+    border:1px solid #2b2d35;
+
+}
