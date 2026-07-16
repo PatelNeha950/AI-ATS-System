@@ -53,11 +53,10 @@ def login_page():
             else:
 
                 success, result = login_user(email, password)
-
                 if success:
                     st.session_state.logged_in = True
                     st.session_state.user = result
-                    st.session_state.remember = remember
+                    st.session_state.remember_user = remember
                     st.rerun()
 
                 else:

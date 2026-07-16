@@ -75,11 +75,10 @@ if not st.session_state.logged_in:
 if not st.session_state.logged_in:
 
     auth = st.segmented_control(
-        "",
-        ["Login", "Sign Up"],
-        default="Login",
-        key="auth_selector"
-    )
+    "Authentication",
+    ["Login", "Sign Up"],
+    label_visibility="collapsed"
+)
 
     st.markdown("<br>", unsafe_allow_html=True)
 
