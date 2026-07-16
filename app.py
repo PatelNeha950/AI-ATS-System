@@ -28,11 +28,10 @@ from dashboard.metrics import show_candidate
 # =====================================================
 # Page Configuration
 # =====================================================
-
 st.set_page_config(
     page_title="AI Resume Screening System",
     page_icon="🤖",
-    layout="centered"
+    layout="wide"
 )
 def load_css():
 
@@ -78,11 +77,6 @@ if "user" not in st.session_state:
 # =====================================================
 # Authentication
 # =====================================================
-auth = st.radio(
-    "",
-    ["Login","Sign Up"],
-    horizontal=True
-)
 if not st.session_state.logged_in:
 
     st.markdown("<br>", unsafe_allow_html=True)
