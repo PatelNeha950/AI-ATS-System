@@ -54,45 +54,38 @@ create_table()
 
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
-if not st.session_state.logged_in:
 
-    st.markdown(
-        """
-        <style>
-
-        section[data-testid="stSidebar"]{
-            display:none;
-        }
-
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 if "user" not in st.session_state:
     st.session_state.user = None
-# =====================================================
-# Authentication
-# =====================================================
 
-# =====================================================
-# Authentication
-# =====================================================
+# Hide sidebar before login
 if not st.session_state.logged_in:
+    st.markdown("""
+    <style>
+    section[data-testid="stSidebar"]{
+        display:none;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
+# =====================================================
+# Authentication
+# =====================================================
+
+if not st.session_state.logged_in:
 
     auth = st.segmented_control(
         "",
-        ["Login","Sign Up"],
-        default="Login"
+        ["Login", "Sign Up"],
+        default="Login",
+        key="auth_selector"
     )
 
+    st.markdown("<br>", unsafe_allow_html=True)
+
     if auth == "Login":
-
         login_page()
-
     else:
-
         signup_page()
 
     st.stop()

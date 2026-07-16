@@ -4,98 +4,83 @@ from auth.auth import register_user
 
 def signup_page():
 
-    st.markdown(
-        """
-        <div class="login-card">
+    st.markdown("<br>", unsafe_allow_html=True)
 
-            <div class="login-title">
-                🤖 AI Resume Screening System
-            </div>
+    left, center, right = st.columns([1, 2, 1])
 
-            <div class="login-subtitle">
-                Create your Recruiter Account
-            </div>
+    with center:
 
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        st.title("🤖 AI Resume Screening System")
+        st.caption("Create your Recruiter Account")
 
-    with st.container():
+        with st.form("signup_form"):
 
-        col1, col2, col3 = st.columns([1,2,1])
+            name = st.text_input(
+                "👤 Full Name",
+                key="signup_name"
+            )
 
-        with col2:
+            email = st.text_input(
+                "📧 Email",
+                key="signup_email"
+            )
 
-            with st.form("signup_form"):
+            show = st.checkbox(
+                "👁 Show Password",
+                key="signup_show"
+            )
 
-                name = st.text_input(
-                    "👤 Full Name"
+            if show:
+
+                password = st.text_input(
+                    "🔒 Password",
+                    key="signup_password_show"
                 )
 
-                email = st.text_input(
-                    "📧 Email"
+                confirm = st.text_input(
+                    "🔒 Confirm Password",
+                    key="signup_confirm_show"
                 )
 
-                show = st.checkbox(
-                    "Show Password"
+            else:
+
+                password = st.text_input(
+                    "🔒 Password",
+                    type="password",
+                    key="signup_password_hide"
                 )
 
-                if show:
-
-                    password = st.text_input(
-                        "🔒 Password"
-                    )
-
-                    confirm = st.text_input(
-                        "🔒 Confirm Password"
-                    )
-
-                else:
-
-                    password = st.text_input(
-                        "🔒 Password",
-                        type="password"
-                    )
-
-                    confirm = st.text_input(
-                        "🔒 Confirm Password",
-                        type="password"
-                    )
-
-                agree = st.checkbox(
-                    "I agree to the Terms & Conditions"
+                confirm = st.text_input(
+                    "🔒 Confirm Password",
+                    type="password",
+                    key="signup_confirm_hide"
                 )
 
-                signup = st.form_submit_button(
-                    "✨ Create Account"
-                )
+            agree = st.checkbox(
+                "I agree to the Terms & Conditions",
+                key="signup_agree"
+            )
 
-            if signup:
+            signup = st.form_submit_button(
+                "✨ Create Account",
+                use_container_width=True
+            )
 
-                if not name or not email or not password or not confirm:
+        if signup:
 
-                    st.error(
-                        "Please fill all fields."
-                    )
+            if not name or not email or not password or not confirm:
 
-                    return
+                st.error("Please fill all fields.")
 
-                if password != confirm:
+            elif password != confirm:
 
-                    st.error(
-                        "Passwords do not match."
-                    )
+                st.error("Passwords do not match.")
 
-                    return
+            elif not agree:
 
-                if not agree:
+                st.warning("Please accept the Terms & Conditions.")
 
-                    st.warning(
-                        "Please accept the Terms & Conditions."
-                    )
-
-                    return
+            else:
 
                 success, message = register_user(
                     name,
@@ -115,15 +100,13 @@ def signup_page():
 
                     st.error(message)
 
-    st.markdown(
-        """
-        <div style="text-align:center;
-                    color:#9ca3af;
-                    margin-top:15px;">
-
-        Secure Recruiter Registration
-
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <center>
+                <span style="color:#9ca3af;">
+                    Secure Recruiter Registration
+                </span>
+            </center>
+            """,
+            unsafe_allow_html=True
+        )

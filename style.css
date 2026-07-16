@@ -1,144 +1,302 @@
-/* =====================================================
-   AI Resume Screening System - Responsive Premium Theme
-===================================================== */
+/* ==========================================
+   AI Resume Screening System
+   Premium Professional SaaS Theme
+========================================== */
 
 /* Hide Streamlit Branding */
 #MainMenu,
 footer,
-header {
-    visibility: hidden;
+header{
+    visibility:hidden;
 }
 
-/* Background */
-.stApp {
-    background:
-        radial-gradient(circle at top right,
-        rgba(255,255,255,0.04) 0%,
-        transparent 28%),
-        radial-gradient(circle at bottom left,
-        rgba(255,255,255,0.03) 0%,
-        transparent 30%),
-        #0f1117;
-    color: white;
+/* =========================
+   Background
+========================= */
+
+.stApp{
+    background:linear-gradient(135deg,#eef4ff,#ffffff);
 }
 
-/* Main Container */
-.block-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 2rem;
+/* =========================
+   Main Container
+========================= */
+
+.block-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding-top:2rem;
+
+    padding-bottom:2rem;
+
+    padding-left:2rem;
+
+    padding-right:2rem;
+
 }
 
-/* Login Card */
-.login-card {
-    max-width: 550px;
-    margin: 30px auto;
-    padding: 35px;
-    border-radius: 20px;
-    background: #181b22;
-    border: 1px solid #2c313c;
-    box-shadow: 0 12px 40px rgba(0,0,0,.45);
+/* =========================
+   Sidebar
+========================= */
+
+section[data-testid="stSidebar"]{
+
+    background:#ffffff;
+
+    border-right:1px solid #e5e7eb;
+
 }
 
-/* Titles */
-.login-title {
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 8px;
+/* =========================
+   Headings
+========================= */
+
+h1{
+
+    color:#1f2937;
+
+    font-size:38px;
+
+    font-weight:700;
+
 }
 
-.login-subtitle {
-    text-align: center;
-    color: #9ca3af;
-    font-size: 15px;
-    margin-bottom: 25px;
+h2{
+
+    color:#1f2937;
+
 }
 
-/* Inputs */
-.stTextInput input {
-    background: #1a1d24 !important;
-    color: white !important;
-    border: 1px solid #31343c !important;
-    border-radius: 12px !important;
-    height: 50px !important;
-    padding-left: 15px !important;
+h3{
+
+    color:#1f2937;
+
 }
 
-.stTextInput input:focus {
-    border: 1px solid #3b82f6 !important;
+p{
+
+    color:#4b5563;
+
 }
 
-/* Buttons */
-.stButton > button {
-    width: 100%;
-    height: 50px;
-    border-radius: 12px;
-    background: white;
-    color: #111827;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
+/* =========================
+   Login Card
+========================= */
+
+.login-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+    0 12px 40px rgba(0,0,0,.08);
+
+    margin:auto;
+
+    max-width:600px;
+
 }
 
-.stButton > button:hover {
-    transform: translateY(-2px);
+/* =========================
+   Text Inputs
+========================= */
+
+.stTextInput input{
+
+    background:white !important;
+
+    color:#111827 !important;
+
+    border:1px solid #d1d5db !important;
+
+    border-radius:12px !important;
+
+    height:52px !important;
+
 }
 
-/* Sidebar */
-section[data-testid="stSidebar"] {
-    background: #16181d;
+.stTextInput input:focus{
+
+    border:2px solid #2563eb !important;
+
+    box-shadow:none !important;
+
 }
 
-/* Cards */
-div[data-testid="metric-container"] {
-    background: #181b22;
-    border: 1px solid #2d3138;
-    border-radius: 15px;
-    padding: 18px;
+/* =========================
+   Selectbox
+========================= */
+
+.stSelectbox > div{
+
+    border-radius:12px;
+
 }
 
-/* Tables */
-table {
-    border-radius: 12px;
-    overflow: hidden;
+/* =========================
+   Buttons
+========================= */
+
+.stButton > button{
+
+    width:100%;
+
+    height:52px;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+.stButton > button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
 }
 
-::-webkit-scrollbar-thumb {
-    background: #3a3d45;
-    border-radius: 10px;
+/* =========================
+   File Upload
+========================= */
+
+section[data-testid="stFileUploader"]{
+
+    background:white;
+
+    border:2px dashed #3b82f6;
+
+    border-radius:15px;
+
+    padding:20px;
+
 }
 
-::-webkit-scrollbar-track {
-    background: #17191f;
+/* =========================
+   Metric Cards
+========================= */
+
+div[data-testid="metric-container"]{
+
+    background:white;
+
+    border-radius:18px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+
+    padding:20px;
+
 }
 
-/* Headings */
-h1, h2, h3 {
-    color: white;
-    word-break: normal !important;
-    white-space: normal !important;
+/* =========================
+   Expanders
+========================= */
+
+.streamlit-expanderHeader{
+
+    background:white;
+
+    border-radius:12px;
+
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .block-container {
-        padding: 1rem;
-    }
+/* =========================
+   Tables
+========================= */
 
-    .login-card {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-    }
+table{
 
-    h1 {
-        font-size: 28px;
-    }
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+/* =========================
+   Progress
+========================= */
+
+.stProgress>div>div{
+
+    background:#2563eb;
+
+}
+
+/* =========================
+   Success
+========================= */
+
+div[data-baseweb="notification"]{
+
+    border-radius:12px;
+
+}
+
+/* =========================
+   Scrollbar
+========================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:10px;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width:768px){
+
+.block-container{
+
+padding:1rem;
+
+}
+
+.login-card{
+
+padding:25px;
+
+max-width:100%;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
 }
